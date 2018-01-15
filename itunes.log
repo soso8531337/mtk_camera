@@ -1,0 +1,751 @@
+
+[00:26:59.068][4] Found interface 1 with endpoints 04/85 for device 1-14
+[00:26:59.067][1][PROXY] No Device Found..
+[00:26:59.078][4] Using wMaxPacketSize=512 for device 1-14
+[00:26:59.079][4] USB Speed is 480 MBit/s for device 1-14
+[00:26:59.079][3] Connecting to new device on location 0x1000e as ID 1
+[00:26:59.079][6] send_packet(1, 0x0, 0x7faf7320, (nil), 0) ---------------------------------------->发送MUX_PROTO_VERSION
+[00:26:59.078][7][PROXY] poll() returned 1
+
+[00:26:59.741][7][PROXY] usbhost_device_shutdown
+[00:26:59.741][1][PROXY] No Device Found..
+[00:26:59.083][5] All 3 RX loops started successfully
+[00:26:59.741][7] main_loop iteration
+[00:26:59.741][7] USB timeout is 1000 ms
+[00:26:59.741][7] Device timeout is 100000 ms
+[00:26:59.741][7] fd count is 4
+[00:26:59.741][7] poll() returned 1
+[00:26:59.742][6] TX callback dev 1-14 len 20 -> 20 status 0----------------------------------------->发送MUX_PROTO_VERSION 成功回调
+[00:26:59.742][7] main_loop iteration
+[00:26:59.742][7] USB timeout is 1000 ms
+[00:26:59.742][7] Device timeout is 100000 ms
+[00:26:59.742][7] fd count is 4
+[00:26:59.742][7] poll() returned 1
+[00:26:59.742][6] RX callback dev 1-14 len 20 status 0------------------------------------------------>收到MUX_PROTO_VERSION 的响应
+[00:26:59.742][6] Mux data input for device 0x467780: 0x498550 len 20
+[00:26:59.743][6] send_packet(1, 0x2, (nil), 0x421060, 1)---------------------------------------------->发送MUX_PROTO_SETUP 
+[00:26:59.743][3] Connected to v2.0 device 1 on location 0x1000e with serial number 504d57dd11d0312828396beba8a58a354bbf1955
+[00:26:59.743][5] client_device_add: id 1, location 0x1000e, serial 504d57dd11d0312828396beba8a58a354bbf1955
+[00:26:59.743][5] send_pkt fd 10 tag 0 msg 4 payload_length 268
+[00:26:59.743][7] main_loop iteration
+[00:26:59.744][7] USB timeout is 998 ms
+[00:26:59.744][7] Device timeout is 100000 ms
+[00:26:59.744][7] fd count is 4
+[00:26:59.744][7] poll() returned 2
+[00:26:59.744][6] TX callback dev 1-14 len 17 -> 17 status 0----------------------------------------------------------->发送MUX_PROTO_SETUP回调
+[00:26:59.744][5][PROXY] Add Device:
+ID:1ProductID:4776
+Serical:504d57dd11d0312828396beba8a58a354bbf1955
+Location:65550
+Padding:255
+
+[00:26:59.745][7] main_loop iteration
+[00:26:59.745][7] USB timeout is 997 ms
+[00:26:59.745][7] Device timeout is 100000 ms
+[00:26:59.745][7] fd count is 4
+[00:27:00.744][7][PROXY] poll() returned 0
+[00:27:00.744][7][PROXY] usbhost_device_shutdown
+[00:27:00.744][6][PROXY] Applicaion Update connection: events 0
+[00:27:00.744][7][PROXY] usbhost_device_shutdown
+[00:27:00.744][7] poll() returned 1
+[00:27:00.744][4] New client on fd 14 (pid 323)
+[00:27:00.745][7] main_loop iteration
+[00:27:00.745][7] USB timeout is 0 ms
+[00:27:00.745][7] Device timeout is 100000 ms
+[00:27:00.745][7] fd count is 5
+[00:27:00.745][7] poll() returned 1
+[00:27:00.745][7] main_loop iteration
+[00:27:00.745][7] USB timeout is 0 ms
+[00:27:00.745][7] Device timeout is 100000 ms
+[00:27:00.745][7] fd count is 5
+[00:27:00.746][7] poll() returned 1
+[00:27:00.746][5] Client command in fd 14 len 24 ver 0 msg 2 tag 3
+[00:27:00.746][5] Client 14 connection request to device 1 port 5555
+[00:27:00.746][5] [OUT] dev=1 sport=1 dport=5555 seq=0 ack=0 flags=0x2 window=131072[512] len=0----------------------------------->发送TH_SYN请求
+[00:27:00.746][6] send_packet(1, 0x6, 0x7faf7358, (nil), 0)
+[00:27:00.747][7] main_loop iteration
+[00:27:00.747][7] USB timeout is 0 ms
+[00:27:00.747][7] Device timeout is 100000 ms
+[00:27:00.747][7] fd count is 5
+[00:27:00.747][7] poll() returned 1
+[00:27:00.747][6] TX callback dev 1-14 len 36 -> 36 status 0----------------------------------------------------------------->发送TH_SYN请求成功回调
+[00:27:00.750][6] usb_discover: scanning 5 devices
+[00:27:00.750][6] Try To Switch Android AOA Mode  v/p 1d6b:0002 at 1-1
+[00:27:00.751][6] No Found Android Device in 1-1
+[00:27:00.751][6] Try To Switch Android AOA Mode  v/p 1d6b:0001 at 2-1
+[00:27:00.752][6] No Found Android Device in 2-1
+[00:27:00.752][6] Try To Switch Android AOA Mode  v/p 1a40:0101 at 1-2
+[00:27:00.753][6] No Found Android Device in 1-2
+[00:27:00.753][6] Try To Switch Android AOA Mode  v/p 2109:0701 at 1-3
+[00:27:00.753][2] Could not open device 1-3: -4
+[00:27:00.753][7] main_loop iteration
+[00:27:00.753][7] USB timeout is 1000 ms
+[00:27:00.753][7] Device timeout is 100000 ms
+[00:27:00.753][7] fd count is 5
+[00:27:00.754][7] poll() returned 1
+[00:27:00.754][6] RX callback dev 1-14 len 88 status 0------------------------------------------------------------------------>发送TH_SYN 响应
+[00:27:00.754][6] Mux data input for device 0x467780: 0x49c558 len 88
+[00:27:00.754][4] device_control_input: void AppleUSBDeviceMux::handleConnectResult(struct BulkUSBMuxSession *
+[00:27:00.754][7] main_loop iteration
+[00:27:00.754][7] USB timeout is 999 ms
+[00:27:00.754][7] Device timeout is 100000 ms
+[00:27:00.755][7] fd count is 5
+[00:27:00.755][7] poll() returned 1
+[00:27:00.755][6] RX callback dev 1-14 len 70 status 0
+[00:27:00.755][6] Mux data input for device 0x467780: 0x4a0560 len 70
+[00:27:00.755][5] [IN] dev=1 sport=5555 dport=1 seq=0 ack=1 flags=0x4 window=0[0] len=34
+[00:27:00.755][5] RST reason: handleConnectResult: failure - 61
+[00:27:00.755][4] Connection refused by device 1 (1->5555)
+[00:27:00.755][5] connection_teardown dev 1 sport 1 dport 5555
+[00:27:00.756][6] client_notify_connect fd 14 result 3
+[00:27:00.756][5] send_pkt fd 14 tag 3 msg 1 payload_length 4
+[00:27:00.756][7] main_loop iteration
+[00:27:00.756][7] USB timeout is 998 ms
+[00:27:00.756][7] Device timeout is 100000 ms
+[00:27:00.756][7] fd count is 5
+[00:27:00.756][7] poll() returned 1
+[00:27:00.757][7] main_loop iteration
+[00:27:00.757][7] USB timeout is 997 ms
+[00:27:00.757][7] Device timeout is 100000 ms
+[00:27:00.757][7] fd count is 5
+[00:27:00.757][7] poll() returned 1
+[00:27:00.757][4] Client 14 connection closed
+[00:27:00.757][4] Disconnecting client fd 14
+[00:27:00.758][7] main_loop iteration
+[00:27:00.758][7] USB timeout is 996 ms
+[00:27:00.758][7] Device timeout is 100000 ms
+[00:27:00.758][7] fd count is 4
+[00:27:01.756][7] poll() returned 0
+[00:27:01.758][6] usb_discover: scanning 5 devices
+[00:27:01.758][6] Try To Switch Android AOA Mode  v/p 1d6b:0002 at 1-1
+[00:27:01.759][6] No Found Android Device in 1-1
+[00:27:01.759][6] Try To Switch Android AOA Mode  v/p 1d6b:0001 at 2-1
+[00:27:01.760][7][PROXY] poll() returned 0
+[00:27:01.760][7][PROXY] usbhost_device_shutdown
+[00:27:01.760][6][PROXY] Applicaion Update connection: events 0
+[00:27:01.760][7][PROXY] usbhost_device_shutdown
+[00:27:01.761][6] No Found Android Device in 2-1
+[00:27:01.761][6] Try To Switch Android AOA Mode  v/p 1a40:0101 at 1-2
+[00:27:01.762][6] No Found Android Device in 1-2
+[00:27:01.762][6] Try To Switch Android AOA Mode  v/p 2109:0701 at 1-3
+[00:27:01.762][2] Could not open device 1-3: -4
+[00:27:01.762][7] main_loop iteration
+[00:27:01.762][7] USB timeout is 1000 ms
+[00:27:01.762][7] Device timeout is 100000 ms
+[00:27:01.763][7] fd count is 4
+[00:27:01.763][7] poll() returned 1
+[00:27:01.763][4] New client on fd 13 (pid 323)
+[00:27:01.763][7] main_loop iteration
+[00:27:01.763][7] USB timeout is 1000 ms
+[00:27:01.763][7] Device timeout is 100000 ms
+[00:27:01.763][7] fd count is 5
+[00:27:01.763][7] poll() returned 1
+[00:27:01.764][7] main_loop iteration
+[00:27:01.764][7] USB timeout is 999 ms
+[00:27:01.764][7] Device timeout is 100000 ms
+[00:27:01.764][7] fd count is 5
+[00:27:01.764][7] poll() returned 1
+[00:27:01.764][5] Client command in fd 13 len 24 ver 0 msg 2 tag 4
+[00:27:01.764][5] Client 13 connection request to device 1 port 5555
+[00:51:47.868][4] device_control_input: void AppleUSBDeviceMux::handleConnectResult(struct BulkUSBMuxSession *
+[00:51:47.868][7] main_loop iteration
+[00:51:47.868][7] USB timeout is 317 ms
+[00:51:47.868][7] Device timeout is 100000 ms
+[00:51:47.869][7] fd count is 5
+[00:51:47.869][7] poll() returned 1
+[00:51:47.869][6] RX callback dev 1-42 len 70 status 0
+[00:51:47.869][6] Mux data input for device 0x4654e8: 0x47e4e8 len 70
+[00:51:47.869][5] [IN] dev=1 sport=5555 dport=7 seq=0 ack=1 flags=0x4 window=0[0] len=34
+[00:51:47.869][5] RST reason: handleConnectResult: failure - 61
+[00:51:47.869][4] Connection refused by device 1 (7->5555)
+[00:51:47.869][5] connection_teardown dev 1 sport 7 dport 5555
+[00:51:47.870][6] client_notify_connect fd 14 result 3
+[00:51:47.870][5] send_pkt fd 14 tag 9 msg 1 payload_length 4
+[00:51:47.870][7] main_loop iteration
+[00:51:47.870][7] USB timeout is 316 ms
+[00:51:47.870][7] Device timeout is 100000 ms
+[00:51:47.870][7] fd count is 5
+[00:51:47.870][7] poll() returned 1
+[00:51:47.871][7] main_loop iteration
+[00:51:47.871][7] USB timeout is 315 ms
+[00:51:47.871][7] Device timeout is 100000 ms
+[00:51:47.871][7] fd count is 5
+[00:51:47.871][7] poll() returned 1
+[00:51:47.871][4] Client 14 connection closed
+[00:51:47.871][4] Disconnecting client fd 14
+[00:51:47.871][7] main_loop iteration
+[00:51:47.871][7] USB timeout is 314 ms
+[00:51:47.871][7] Device timeout is 100000 ms
+[00:51:47.872][7] fd count is 4
+[00:51:48.188][7] poll() returned 0
+[00:51:48.190][6] usb_discover: scanning 5 devices
+[00:51:48.190][6] Try To Switch Android AOA Mode  v/p 1d6b:0002 at 1-1
+[00:51:48.191][6] No Found Android Device in 1-1
+[00:51:48.191][6] Try To Switch Android AOA Mode  v/p 1d6b:0001 at 2-1
+[00:51:48.192][6] No Found Android Device in 2-1
+[00:51:48.192][6] Try To Switch Android AOA Mode  v/p 1a40:0101 at 1-2
+[00:51:48.193][6] No Found Android Device in 1-2
+[00:51:48.193][6] Try To Switch Android AOA Mode  v/p 2109:0701 at 1-3
+[00:51:48.193][2] Could not open device 1-3: -4
+[00:51:48.193][7] main_loop iteration
+[00:51:48.193][7] USB timeout is 1000 ms
+[00:51:48.194][7] Device timeout is 100000 ms
+[00:51:48.194][7] fd count is 4
+[00:51:48.872][7][PROXY] poll() returned 0
+[00:51:48.872][7][PROXY] usbhost_device_shutdown
+[00:51:48.872][6][PROXY] Applicaion Update connection: events 0
+[00:51:48.872][7][PROXY] usbhost_device_shutdown
+[00:51:48.872][7] poll() returned 1
+[00:51:48.872][4] New client on fd 14 (pid 1239)
+[00:51:48.872][7] main_loop iteration
+[00:51:48.873][7] USB timeout is 321 ms
+[00:51:48.873][7] Device timeout is 100000 ms
+[00:51:48.873][7] fd count is 5
+[00:51:48.873][7] poll() returned 1
+[00:51:48.873][7] main_loop iteration
+[00:51:48.873][7] USB timeout is 321 ms
+[00:51:48.873][7] Device timeout is 100000 ms
+[00:51:48.873][7] fd count is 5
+[00:51:48.873][7] poll() returned 1
+[00:51:48.874][5] Client command in fd 14 len 24 ver 0 msg 2 tag 10
+[00:51:48.874][5] Client 14 connection request to device 1 port 5555
+[00:51:48.874][5] [OUT] dev=1 sport=8 dport=5555 seq=0 ack=0 flags=0x2 window=131072[512] len=0
+[00:51:48.874][6] send_packet(1, 0x6, 0x7f83b678, (nil), 0)
+[00:51:48.874][7] main_loop iteration
+[00:51:48.875][7] USB timeout is 319 ms
+[00:51:48.875][7] Device timeout is 100000 ms
+[00:51:48.875][7] fd count is 5
+[00:51:48.875][7] poll() returned 1
+[00:51:48.875][6] TX callback dev 1-42 len 36 -> 36 status 0
+[00:51:48.875][7] main_loop iteration
+[00:51:48.875][7] USB timeout is 319 ms
+[00:51:48.875][7] Device timeout is 100000 ms
+[00:51:48.875][7] fd count is 5
+[00:51:48.876][7] poll() returned 1
+[00:51:48.876][6] RX callback dev 1-42 len 36 status 0
+[00:51:48.876][6] Mux data input for device 0x4654e8: 0x4764d8 len 36
+[00:51:48.876][5] [IN] dev=1 sport=5555 dport=8 seq=0 ack=1 flags=0x12 window=131072[512] len=0--------------------------->手机响应TH_SYN 
+[00:51:48.876][5] [OUT] dev=1 sport=8 dport=5555 seq=1 ack=1 flags=0x10 window=131072[512] len=0=--------------------------->再次发送TH_ACK给手机
+[00:51:48.876][6] send_packet(1, 0x6, 0x7f83b548, (nil), 0)
+[00:51:48.877][6] client_notify_connect fd 14 result 0
+[00:51:48.877][5] send_pkt fd 14 tag 10 msg 1 payload_length 4
+[00:51:48.877][6] update_connection: sendable 49116, events 1, flags 0
+[00:51:48.877][7] main_loop iteration
+[00:51:48.877][7] USB timeout is 317 ms
+[00:51:48.877][7] Device timeout is 100000 ms
+[00:51:48.877][7] fd count is 5
+[00:51:48.877][7] poll() returned 2
+[00:51:48.878][6] TX callback dev 1-42 len 36 -> 36 status 0
+[00:51:48.878][5][PROXY] Connect Device 1 success!
+[00:51:48.878][3][PROXY] Set device[1] INIT
+[00:51:48.878][1][PROXY] Application Device[1] Connection Successful..
+[00:51:48.878][5] Client 14 switching to CONNECTED state
+[00:51:48.878][7] main_loop iteration
+[00:51:48.879][7] USB timeout is 315 ms
+[00:51:48.879][7] Device timeout is 100000 ms
+[00:51:48.879][7] fd count is 5
+[00:51:48.881][7] poll() returned 1
+[00:51:48.881][6] RX callback dev 1-42 len 60 status 0---------------------------------------------------------------->收到手机端发来的请求
+[00:51:48.882][6] Mux data input for device 0x4654e8: 0x47a4e0 len 60
+[00:51:48.882][5] [IN] dev=1 sport=5555 dport=8 seq=1 ack=1 flags=0x10 window=131072[512] len=24
+[00:51:48.882][6] update_connection: sendable 49116, events 5, flags 0
+[00:51:48.882][5] [OUT] dev=1 sport=8 dport=5555 seq=1 ack=1 flags=0x10 window=131072[512] len=0------------------------->发送请求对应ACK的响应
+[00:51:48.882][6] send_packet(1, 0x6, 0x7f83b520, (nil), 0)
+[00:51:48.882][6] update_connection: sendable 49116, events 5, flags 0
+[00:51:48.883][7] main_loop iteration
+[00:51:48.883][7] USB timeout is 311 ms
+[00:51:48.883][7] Device timeout is 100000 ms
+[00:51:48.883][7] fd count is 5
+[00:51:48.883][7] poll() returned 2
+[00:51:48.883][6] TX callback dev 1-42 len 36 -> 36 status 0
+[00:51:48.883][6] client_process in CONNECTED state
+[00:51:48.883][6] device_client_process (4)
+[00:51:48.883][6] client_write fd 14 buf 0x2b33d008 len 24
+[00:51:48.884][7][PROXY] poll() returned 1
+[00:51:48.884][1][PROXY] Receive 24/262656Bytes-->addr:0x2b3bf008
+[00:51:48.884][5][PROXY] Disk Lun is [1]
+[00:51:48.884][1][PROXY] Application Handle Finish:
+wtag=1
+ctrid=5
+addr=0
+len=1
+wlun=0
+Skip Next:SkipLen:24
+CntLen:0
+[00:51:48.884][6][PROXY] Applicaion Update connection: events 5
+[00:51:48.884][7][PROXY] usbhost_device_shutdown
+[00:51:48.884][7][PROXY] poll() returned 1
+[00:51:48.885][1][PROXY] Send buffer Used Size Change: 25Bytes---->0Bytes
+[00:51:48.885][7][PROXY] usbhost_device_shutdown
+[00:51:48.885][6] update_connection: sendable 49116, events 1, flags 1
+[00:51:49.543][7] main_loop iteration
+[00:51:49.543][7] USB timeout is 0 ms
+[00:51:49.543][7] Device timeout is 0 ms
+[00:51:49.544][7] fd count is 5
+[00:51:49.544][7] poll() returned 1
+[00:51:49.544][6] client_process in CONNECTED state
+[00:51:49.544][6] device_client_process (1)
+[00:51:49.544][6] client_read fd 14 buf 0x4c44f8 len 49116
+[00:51:49.544][5] [OUT] dev=1 sport=8 dport=5555 seq=1 ack=25 flags=0x10 window=131072[512] len=25
+[00:51:49.544][6] send_packet(1, 0x6, 0x7f83b708, 0x4c44f8, 25)
+[00:51:49.545][6] update_connection: sendable 49116, events 1, flags 0
+[00:51:49.545][7] main_loop iteration
+[00:51:49.545][7] USB timeout is 0 ms
+[00:51:49.545][7] Device timeout is 100000 ms
+[00:51:49.545][7] fd count is 5
+[00:51:49.545][7] poll() returned 1
+[00:51:49.545][6] TX callback dev 1-42 len 61 -> 61 status 0
+[00:51:49.548][6] usb_discover: scanning 5 devices
+[00:51:49.548][6] Try To Switch Android AOA Mode  v/p 1d6b:0002 at 1-1
+[00:51:49.549][6] No Found Android Device in 1-1
+[00:51:49.549][6] Try To Switch Android AOA Mode  v/p 1d6b:0001 at 2-1
+[00:51:49.550][6] No Found Android Device in 2-1
+[00:51:49.550][6] Try To Switch Android AOA Mode  v/p 1a40:0101 at 1-2
+[00:51:49.551][6] No Found Android Device in 1-2
+[00:51:49.551][6] Try To Switch Android AOA Mode  v/p 2109:0701 at 1-3
+[00:51:49.551][2] Could not open device 1-3: -4
+[00:51:49.551][7] main_loop iteration
+[00:51:49.551][7] USB timeout is 1000 ms
+[00:51:49.551][7] Device timeout is 100000 ms
+[00:51:49.551][7] fd count is 5
+[00:51:49.552][7] poll() returned 1
+[00:51:49.552][6] RX callback dev 1-42 len 60 status 0
+[00:51:49.552][6] Mux data input for device 0x4654e8: 0x47e4e8 len 60
+[00:51:49.552][5] [IN] dev=1 sport=5555 dport=8 seq=25 ack=26 flags=0x10 window=131072[512] len=24
+[00:51:49.552][6] update_connection: sendable 49116, events 5, flags 0
+[00:51:49.552][5] [OUT] dev=1 sport=8 dport=5555 seq=26 ack=25 flags=0x10 window=131072[512] len=0
+[00:51:49.552][6] send_packet(1, 0x6, 0x7f83b520, (nil), 0)
+[00:51:49.553][6] update_connection: sendable 49116, events 5, flags 0
+[00:51:49.553][7] main_loop iteration
+[00:51:49.553][7] USB timeout is 999 ms
+[00:51:49.553][7] Device timeout is 100000 ms
+[00:51:49.553][7] fd count is 5
+[00:51:49.553][7] poll() returned 2
+[00:51:49.553][6] TX callback dev 1-42 len 36 -> 36 status 0
+[00:51:49.554][6] client_process in CONNECTED state
+[00:51:49.554][6] device_client_process (4)
+[00:51:49.554][6] client_write fd 14 buf 0x2b33d008 len 24
+[00:51:49.554][7][PROXY] poll() returned 1
+[00:51:49.554][1][PROXY] Receive 24/262656Bytes-->addr:0x2b3bf008
+[00:51:49.554][5][PROXY] Disk Lun is [1]
+[00:51:49.554][1][PROXY] Application Handle Finish:
+wtag=2
+ctrid=5
+addr=0
+len=1
+wlun=0
+Skip Next:SkipLen:24
+CntLen:0
+[00:51:49.555][6][PROXY] Applicaion Update connection: events 5
+[00:51:49.555][7][PROXY] usbhost_device_shutdown
+[00:51:49.555][7][PROXY] poll() returned 1
+[00:51:49.555][1][PROXY] Send buffer Used Size Change: 25Bytes---->0Bytes
+[00:51:49.555][7][PROXY] usbhost_device_shutdown
+[00:51:49.555][6] update_connection: sendable 49116, events 1, flags 1
+[00:51:49.555][7] main_loop iteration
+[00:51:49.555][7] USB timeout is 996 ms
+[00:51:49.555][7] Device timeout is 28 ms
+[00:51:49.556][7] fd count is 5
+[00:51:49.556][7] poll() returned 1
+[00:51:49.556][6] client_process in CONNECTED state
+[00:51:49.556][6] device_client_process (1)
+[00:51:49.556][6] client_read fd 14 buf 0x4c44f8 len 49116
+[00:51:49.556][5] [OUT] dev=1 sport=8 dport=5555 seq=26 ack=49 flags=0x10 window=131072[512] len=25
+[00:51:49.556][6] send_packet(1, 0x6, 0x7f83b708, 0x4c44f8, 25)
+[00:51:49.556][6] update_connection: sendable 49116, events 1, flags 0
+[00:51:49.557][7] main_loop iteration
+[00:51:49.557][7] USB timeout is 995 ms
+[00:51:50.217][7] Device timeout is 100000 ms
+[00:51:50.217][7] fd count is 5
+[00:51:50.218][7] poll() returned 1
+[00:51:50.218][6] TX callback dev 1-42 len 61 -> 61 status 0
+[00:51:50.218][7] main_loop iteration
+[00:51:50.218][7] USB timeout is 333 ms
+[00:51:50.218][7] Device timeout is 100000 ms
+[00:51:50.218][7] fd count is 5
+[00:51:50.556][7] poll() returned 0
+[00:51:50.558][6] usb_discover: scanning 5 devices
+[00:51:50.558][6] Try To Switch Android AOA Mode  v/p 1d6b:0002 at 1-1
+[00:51:50.559][6] No Found Android Device in 1-1
+[00:51:50.559][6] Try To Switch Android AOA Mode  v/p 1d6b:0001 at 2-1
+[00:51:50.560][7][PROXY] poll() returned 0
+[00:51:50.560][7][PROXY] usbhost_device_shutdown
+[00:51:50.560][6][PROXY] Applicaion Update connection: events 1
+[00:51:50.560][7][PROXY] usbhost_device_shutdown
+[00:51:50.560][6] No Found Android Device in 2-1
+[00:51:50.561][6] Try To Switch Android AOA Mode  v/p 1a40:0101 at 1-2
+[00:51:50.561][6] No Found Android Device in 1-2
+[00:51:50.562][6] Try To Switch Android AOA Mode  v/p 2109:0701 at 1-3
+[00:51:50.562][2] Could not open device 1-3: -4
+[00:51:50.562][7] main_loop iteration
+[00:51:50.562][7] USB timeout is 1000 ms
+[00:51:50.562][7] Device timeout is 100000 ms
+[00:51:50.562][7] fd count is 5
+[00:51:50.581][7] poll() returned 1
+[00:51:50.581][6] RX callback dev 1-42 len 60 status 0
+[00:51:50.581][6] Mux data input for device 0x4654e8: 0x4764d8 len 60
+[00:51:50.581][5] [IN] dev=1 sport=5555 dport=8 seq=49 ack=51 flags=0x10 window=131072[512] len=24
+[00:51:50.582][6] update_connection: sendable 49116, events 5, flags 0
+[00:51:50.582][5] [OUT] dev=1 sport=8 dport=5555 seq=51 ack=49 flags=0x10 window=131072[512] len=0
+[00:51:50.582][6] send_packet(1, 0x6, 0x7f83b520, (nil), 0)
+[00:51:50.582][6] update_connection: sendable 49116, events 5, flags 0
+[00:51:50.582][7] main_loop iteration
+[00:51:50.582][7] USB timeout is 980 ms
+[00:51:50.583][7] Device timeout is 100000 ms
+[00:51:50.583][7] fd count is 5
+[00:51:50.583][7] poll() returned 2
+[00:51:50.583][6] TX callback dev 1-42 len 36 -> 36 status 0
+[00:51:50.583][6] client_process in CONNECTED state
+[00:51:50.583][6] device_client_process (4)
+[00:51:50.583][6] client_write fd 14 buf 0x2b33d008 len 24
+[00:51:50.583][7][PROXY] poll() returned 1
+[00:51:50.584][1][PROXY] Receive 24/262656Bytes-->addr:0x2b3bf008
+[00:51:50.584][3][PROXY] Found Device  0 [/dev/sda]
+[00:51:50.584][6] update_connection: sendable 49116, events 1, flags 1
+[00:51:50.584][7] main_loop iteration
+[00:51:50.585][7] USB timeout is 978 ms
+[00:51:50.585][7] Device timeout is 27 ms
+[00:51:50.585][7] fd count is 5
+[00:51:50.588][1][PROXY] Disk Capacity = 500107862016 Bytes
+[00:51:50.588][5][PROXY] Disk[0]
+Size:500107862016
+Vendor:i4season
+Product:U-Storage
+Version:1.0
+Serical:1234567890abcdef
+[00:51:50.588][1][PROXY] Application Handle Finish:
+wtag=3
+ctrid=3
+addr=0
+len=120
+wlun=0
+Skip Next:SkipLen:24
+CntLen:0
+[00:51:50.588][6][PROXY] Applicaion Update connection: events 5
+[00:51:50.588][7][PROXY] usbhost_device_shutdown
+[00:51:50.589][7][PROXY] poll() returned 1
+[00:51:50.589][1][PROXY] Send buffer Used Size Change: 144Bytes---->0Bytes
+[00:51:50.589][7][PROXY] usbhost_device_shutdown
+[00:51:50.589][7] poll() returned 1
+[00:51:50.589][6] client_process in CONNECTED state
+[00:51:50.589][6] device_client_process (1)
+[00:51:50.589][6] client_read fd 14 buf 0x4c44f8 len 49116
+[00:51:50.589][5] [OUT] dev=1 sport=8 dport=5555 seq=51 ack=73 flags=0x10 window=131072[512] len=144
+[00:51:50.590][6] send_packet(1, 0x6, 0x7f83b708, 0x4c44f8, 144)
+[00:51:50.590][6] update_connection: sendable 49116, events 1, flags 0
+[00:51:50.590][7] main_loop iteration
+[00:51:50.590][7] USB timeout is 972 ms
+[00:51:50.590][7] Device timeout is 100000 ms
+[00:51:50.590][7] fd count is 5
+[00:51:50.590][7] poll() returned 1
+[00:51:50.591][6] TX callback dev 1-42 len 180 -> 180 status 0
+[00:51:50.591][7] main_loop iteration
+[00:51:50.591][7] USB timeout is 972 ms
+[00:51:50.591][7] Device timeout is 100000 ms
+[00:51:50.591][7] fd count is 5
+[00:51:50.592][7] poll() returned 1
+[00:51:50.592][6] RX callback dev 1-42 len 60 status 0
+[00:51:50.592][6] Mux data input for device 0x4654e8: 0x47a4e0 len 60
+[00:51:50.592][5] [IN] dev=1 sport=5555 dport=8 seq=73 ack=195 flags=0x10 window=131072[512] len=24
+[00:51:50.592][6] update_connection: sendable 49116, events 5, flags 0
+[00:51:50.592][5] [OUT] dev=1 sport=8 dport=5555 seq=195 ack=73 flags=0x10 window=131072[512] len=0
+[00:51:50.592][6] send_packet(1, 0x6, 0x7f83b520, (nil), 0)
+[00:51:50.593][6] update_connection: sendable 49116, events 5, flags 0
+[00:51:51.252][7] main_loop iteration
+[00:51:51.252][7] USB timeout is 309 ms
+[00:51:51.252][7] Device timeout is 100000 ms
+[00:51:51.252][7] fd count is 5
+[00:51:51.252][7] poll() returned 2
+[00:51:51.252][6] TX callback dev 1-42 len 36 -> 36 status 0
+[00:51:51.253][6] client_process in CONNECTED state
+[00:51:51.253][6] device_client_process (4)
+[00:51:51.253][6] client_write fd 14 buf 0x2b33d008 len 24
+[00:51:51.253][6] update_connection: sendable 49116, events 1, flags 1
+[00:51:51.253][7] main_loop iteration
+[00:51:51.253][7] USB timeout is 308 ms
+[00:51:51.253][7] Device timeout is 0 ms
+[00:51:51.253][7] fd count is 5
+[00:51:51.253][7] poll() returned 0
+[00:51:51.254][5] Sending ACK due to expired timeout (3110593 -> 3111254)
+[00:51:51.254][5] [OUT] dev=1 sport=8 dport=5555 seq=195 ack=97 flags=0x10 window=131072[512] len=0
+[00:51:51.254][6] send_packet(1, 0x6, 0x7f83b6f8, (nil), 0)
+[00:51:51.254][6] update_connection: sendable 49116, events 1, flags 0
+[00:51:51.254][7] main_loop iteration
+[00:51:51.254][7] USB timeout is 307 ms
+[00:51:51.254][7] Device timeout is 100000 ms
+[00:51:51.255][7] fd count is 5
+[00:51:51.255][7] poll() returned 1
+[00:51:51.255][6] TX callback dev 1-42 len 36 -> 36 status 0
+[00:51:51.255][7] main_loop iteration
+[00:51:51.255][7] USB timeout is 306 ms
+[00:51:51.255][7] Device timeout is 100000 ms
+[00:51:51.255][7] fd count is 5
+[00:51:51.255][7][PROXY] poll() returned 1
+[00:51:51.255][1][PROXY] Receive 24/262656Bytes-->addr:0x2b3bf008
+[00:51:51.256][3][PROXY] Found Device  0 [/dev/sda]
+[00:51:51.256][1][PROXY] Read begin:wtag=4
+ctrid=1
+addr=0
+len=512
+wlun=0
+[00:51:51.264][1][PROXY] Read Finish:wtag=4
+ctrid=1
+addr=0
+len=512
+wlun=0
+[00:51:51.264][1][PROXY] Application Handle Finish:
+wtag=4
+ctrid=1
+addr=0
+len=512
+wlun=0
+Skip Next:SkipLen:24
+CntLen:0
+[00:51:51.265][6][PROXY] Applicaion Update connection: events 5
+[00:51:51.265][7][PROXY] usbhost_device_shutdown
+[00:51:51.265][7][PROXY] poll() returned 1
+[00:51:51.265][7] poll() returned 1
+[00:51:51.265][6] client_process in CONNECTED state
+[00:51:51.265][6] device_client_process (1)
+[00:51:51.265][6] client_read fd 14 buf 0x4c44f8 len 49116
+[00:51:51.265][5] [OUT] dev=1 sport=8 dport=5555 seq=195 ack=97 flags=0x10 window=131072[512] len=536
+[00:51:51.266][6] send_packet(1, 0x6, 0x7f83b708, 0x4c44f8, 536)
+[00:51:51.266][6] update_connection: sendable 49116, events 1, flags 0
+[00:51:51.266][7] main_loop iteration
+[00:51:51.266][7] USB timeout is 295 ms
+[00:51:51.266][7] Device timeout is 100000 ms
+[00:51:51.266][7] fd count is 5
+[00:51:51.266][7] poll() returned 1
+[00:51:51.267][6] TX callback dev 1-42 len 572 -> 572 status 0
+[00:51:51.267][7] main_loop iteration
+[00:51:51.267][7] USB timeout is 295 ms
+[00:51:51.267][7] Device timeout is 100000 ms
+[00:51:51.267][7] fd count is 5
+[00:51:51.267][1][PROXY] Send buffer Used Size Change: 536Bytes---->0Bytes
+[00:51:51.267][7][PROXY] usbhost_device_shutdown
+[00:51:51.268][7] poll() returned 1
+[00:51:51.268][6] RX callback dev 1-42 len 60 status 0
+[00:51:51.268][6] Mux data input for device 0x4654e8: 0x47e4e8 len 60
+[00:51:51.268][5] [IN] dev=1 sport=5555 dport=8 seq=97 ack=731 flags=0x10 window=131072[512] len=24
+[00:51:51.268][6] update_connection: sendable 49116, events 5, flags 0
+[00:51:51.268][5] [OUT] dev=1 sport=8 dport=5555 seq=731 ack=97 flags=0x10 window=131072[512] len=0
+[00:51:51.269][6] send_packet(1, 0x6, 0x7f83b520, (nil), 0)
+[00:51:51.269][6] update_connection: sendable 49116, events 5, flags 0
+[00:51:51.269][7] main_loop iteration
+[00:51:51.269][7] USB timeout is 292 ms
+[00:51:51.269][7] Device timeout is 100000 ms
+[00:51:51.269][7] fd count is 5
+[00:51:51.269][7] poll() returned 2
+[00:51:51.269][6] TX callback dev 1-42 len 36 -> 36 status 0
+[00:51:51.270][6] client_process in CONNECTED state
+[00:51:51.270][6] device_client_process (4)
+[00:51:51.929][6] client_write fd 14 buf 0x2b33d008 len 24
+[00:51:51.929][6] update_connection: sendable 49116, events 1, flags 1
+[00:51:51.929][7] main_loop iteration
+[00:51:51.929][7] USB timeout is 0 ms
+[00:51:51.929][7] Device timeout is 0 ms
+[00:51:51.929][7] fd count is 5
+[00:51:51.929][7] poll() returned 0
+[00:51:51.932][6] usb_discover: scanning 5 devices
+[00:51:51.932][6] Try To Switch Android AOA Mode  v/p 1d6b:0002 at 1-1
+[00:51:51.933][6] No Found Android Device in 1-1
+[00:51:51.933][6] Try To Switch Android AOA Mode  v/p 1d6b:0001 at 2-1
+[00:51:51.934][6] No Found Android Device in 2-1
+[00:51:51.934][6] Try To Switch Android AOA Mode  v/p 1a40:0101 at 1-2
+[00:51:51.935][6] No Found Android Device in 1-2
+[00:51:51.935][6] Try To Switch Android AOA Mode  v/p 2109:0701 at 1-3
+[00:51:51.935][2] Could not open device 1-3: -4
+[00:51:51.935][5] Sending ACK due to expired timeout (3111269 -> 3111935)
+[00:51:51.935][5] [OUT] dev=1 sport=8 dport=5555 seq=731 ack=121 flags=0x10 window=131072[512] len=0
+[00:51:51.936][7][PROXY] poll() returned 1
+[00:51:51.936][1][PROXY] Receive 24/262656Bytes-->addr:0x2b3bf008
+[00:51:51.936][3][PROXY] Found Device  0 [/dev/sda]
+[00:51:51.936][1][PROXY] Read begin:wtag=5
+ctrid=1
+addr=0
+len=512
+wlun=0
+[00:51:51.935][6] send_packet(1, 0x6, 0x7f83b6f8, (nil), 0)
+[00:51:51.937][6] update_connection: sendable 49116, events 1, flags 0
+[00:51:51.937][7] main_loop iteration
+[00:51:51.937][7] USB timeout is 998 ms
+[00:51:51.937][7] Device timeout is 100000 ms
+[00:51:51.937][7] fd count is 5
+[00:51:51.938][7] poll() returned 1
+[00:51:51.938][6] TX callback dev 1-42 len 36 -> 36 status 0
+[00:51:51.938][7] main_loop iteration
+[00:51:51.938][7] USB timeout is 998 ms
+[00:51:51.938][7] Device timeout is 100000 ms
+[00:51:51.938][7] fd count is 5
+[00:51:51.941][1][PROXY] Read Finish:wtag=5
+ctrid=1
+addr=0
+len=512
+wlun=0
+[00:51:51.941][1][PROXY] Application Handle Finish:
+wtag=5
+ctrid=1
+addr=0
+len=512
+wlun=0
+Skip Next:SkipLen:24
+CntLen:0
+[00:51:51.941][6][PROXY] Applicaion Update connection: events 5
+[00:51:51.942][7][PROXY] usbhost_device_shutdown
+[00:51:51.942][7][PROXY] poll() returned 1
+[00:51:51.942][1][PROXY] Send buffer Used Size Change: 536Bytes---->0Bytes
+[00:51:51.942][7][PROXY] usbhost_device_shutdown
+[00:51:51.942][7] poll() returned 1
+[00:51:51.942][6] client_process in CONNECTED state
+[00:51:51.942][6] device_client_process (1)
+[00:51:51.942][6] client_read fd 14 buf 0x4c44f8 len 49116
+[00:51:51.943][5] [OUT] dev=1 sport=8 dport=5555 seq=731 ack=121 flags=0x10 window=131072[512] len=536
+[00:51:51.943][6] send_packet(1, 0x6, 0x7f83b708, 0x4c44f8, 536)
+[00:51:51.943][6] update_connection: sendable 49116, events 1, flags 0
+[00:51:51.943][7] main_loop iteration
+[00:51:51.943][7] USB timeout is 992 ms
+[00:51:51.943][7] Device timeout is 100000 ms
+[00:51:51.943][7] fd count is 5
+[00:51:51.944][7] poll() returned 1
+[00:51:51.944][6] TX callback dev 1-42 len 572 -> 572 status 0
+[00:51:51.944][7] main_loop iteration
+[00:51:51.944][7] USB timeout is 992 ms
+[00:51:51.944][7] Device timeout is 100000 ms
+[00:51:51.944][7] fd count is 5
+[00:51:51.944][7] poll() returned 1
+[00:51:51.945][6] RX callback dev 1-42 len 60 status 0
+[00:51:51.945][6] Mux data input for device 0x4654e8: 0x4764d8 len 60
+[00:51:51.945][5] [IN] dev=1 sport=5555 dport=8 seq=121 ack=1267 flags=0x10 window=131072[512] len=24
+[00:51:51.945][6] update_connection: sendable 49116, events 5, flags 0
+[00:51:51.945][5] [OUT] dev=1 sport=8 dport=5555 seq=1267 ack=121 flags=0x10 window=131072[512] len=0
+[00:51:51.945][6] send_packet(1, 0x6, 0x7f83b520, (nil), 0)
+[00:51:51.945][6] update_connection: sendable 49116, events 5, flags 0
+[00:51:51.946][7] main_loop iteration
+[00:51:51.946][7] USB timeout is 990 ms
+[00:51:51.946][7] Device timeout is 100000 ms
+# UsbHost -f -vvvvvvvvv&5
+[00:51:52.606][7] poll() returned 2
+[00:51:52.606][6] TX callback dev 1-42 len 36 -> 36 status 0
+[00:51:52.606][6] client_process in CONNECTED state
+[00:51:52.606][6] device_client_process (4)
+[00:51:52.606][6] client_write fd 14 buf 0x2b33d008 len 24
+[00:51:52.607][7][PROXY] poll() returned 1
+[00:51:52.607][1][PROXY] Receive 24/262656Bytes-->addr:0x2b3bf008
+[00:51:52.607][3][PROXY] Found Device  0 [/dev/sda]
+[00:51:52.607][1][PROXY] Read begin:wtag=6
+ctrid=1
+addr=2048
+len=512
+wlun=0
+[00:51:52.607][6] update_connection: sendable 49116, events 1, flags 1
+[00:51:52.608][7] main_loop iteration
+[00:51:52.608][7] USB timeout is 327 ms
+[00:51:52.608][7] Device timeout is 0 ms
+[00:51:52.608][7] fd count is 5
+[00:51:52.608][7] poll() returned 0
+[00:51:52.608][5] Sending ACK due to expired timeout (3111945 -> 3112608)
+[00:51:52.608][5] [OUT] dev=1 sport=8 dport=5555 seq=1267 ack=145 flags=0x10 window=131072[512] len=0
+[00:51:52.608][6] send_packet(1, 0x6, 0x7f83b6f8, (nil), 0)
+[00:51:52.609][6] update_connection: sendable 49116, events 1, flags 0
+[00:51:52.609][7] main_loop iteration
+[00:51:52.609][7] USB timeout is 326 ms
+[00:51:52.609][7] Device timeout is 100000 ms
+[00:51:52.609][7] fd count is 5
+[00:51:52.609][7] poll() returned 1
+[00:51:52.609][6] TX callback dev 1-42 len 36 -> 36 status 0
+[00:51:52.610][7] main_loop iteration
+[00:51:52.610][7] USB timeout is 325 ms
+[00:51:52.610][7] Device timeout is 100000 ms
+[00:51:52.610][7] fd count is 5
+[00:51:52.614][1][PROXY] Read Finish:wtag=6
+ctrid=1
+addr=2048
+len=512
+wlun=0
+[00:51:52.615][1][PROXY] Application Handle Finish:
+wtag=6
+ctrid=1
+addr=2048
+len=512
+wlun=0
+Skip Next:SkipLen:24
+CntLen:0
+[00:51:52.615][6][PROXY] Applicaion Update connection: events 5
+[00:51:52.615][7][PROXY] usbhost_device_shutdown
+[00:51:52.615][7][PROXY] poll() returned 1
+[00:51:52.615][1][PROXY] Send buffer Used Size Change: 536Bytes---->0Bytes
+[00:51:52.615][7][PROXY] usbhost_device_shutdown
+[00:51:52.615][7] poll() returned 1
+[00:51:52.616][6] client_process in CONNECTED state
+[00:51:52.616][6] device_client_process (1)
+[00:51:52.616][6] client_read fd 14 buf 0x4c44f8 len 49116
+[00:51:52.616][5] [OUT] dev=1 sport=8 dport=5555 seq=1267 ack=145 flags=0x10 window=131072[512] len=536
+[00:51:52.616][6] send_packet(1, 0x6, 0x7f83b708, 0x4c44f8, 536)
+[00:51:52.616][6] update_connection: sendable 49116, events 1, flags 0
+[00:51:52.617][7] main_loop iteration
+[00:51:52.617][7] USB timeout is 318 ms
+[00:51:52.617][7] Device timeout is 100000 ms
+[00:51:52.617][7] fd count is 5
+[00:51:52.617][7] poll() returned 1
+[00:51:52.617][6] TX callback dev 1-42 len 572 -> 572 status 0
+[00:51:52.617][7] main_loop iteration
+[00:51:52.617][7] USB timeout is 317 ms
+[00:51:52.617][7] Device timeout is 100000 ms
+[00:51:52.618][7] fd count is 5
+[00:51:52.621][7] poll() returned 1
+[00:51:52.621][6] RX callback dev 1-42 len 60 status 0
+[00:51:52.621][6] Mux data input for device 0x4654e8: 0x47a4e0 len 60
+[00:51:52.621][5] [IN] dev=1 sport=5555 dport=8 seq=145 ack=1803 flags=0x10 window=131072[512] len=24
+[00:51:52.621][6] update_connection: sendable 49116, events 5, flags 0
+[00:51:52.621][5] [OUT] dev=1 sport=8 dport=5555 seq=1803 ack=145 flags=0x10 window=131072[512] len=0
+[00:51:52.622][6] send_packet(1, 0x6, 0x7f83b520, (nil), 0)
+[00:51:52.622][6] update_connection: sendable 49116, events 5, flags 0
+[00:51:52.622][7] main_loop iteration
+[00:51:52.622][7] USB timeout is 313 ms
+[00:51:52.622][7] Device timeout is 100000 ms
+[00:51:52.622][7] fd count is 5
+[00:51:52.622][7] poll() returned 2
+[00:51:52.623][6] TX callback dev 1-42 len 36 -> 36 status 0
+[00:51:52.623][6] client_process in CONNECTED state
+[00:51:52.623][6] device_client_process (4)
+[00:51:52.623][6] client_write fd 14 buf 0x2b33d008 len 24
+[00:51:52.623][7][PROXY] poll() returned 1
+[00:51:52.623][1][PROXY] Receive 24/262656Bytes-->addr:0x2b3bf008
+[00:51:53.283][3][PROXY] Found Device  0 [/dev/sda]
+[00:51:53.283][1][PROXY] Read begin:wtag=7
+ctrid=1
+addr=2048
+len=512
+wlun=0
+# killall -KILL UsbHost
+[00:51:52.623][6] update_connection: sendable 49116, events 1, flags 1
+[00:51:53.284][7] main_loop iteration
+[00:51:53.284][7] USB timeout is 0 ms
+[00:51:53.284][7] Device timeout is 0 ms
+[00:51:53.284][7] fd count is 5
+[00:51:53.284][7] poll() returned 0
+[00:51:53.287][6] usb_discover: scanning 5 devices
+[00:51:53.287][6] Try To Switch Android AOA Mode  v/p 1d6b:0002 at 1-1
+[00:51:53.292][6] No Found Android Device in 1-1
+[00:51:53.292][6] Try To Switch Android AOA Mode  v/p 1d6b:0001 at 2-1
+[00:51:53.293][6] No Found Android Device in 2-1
+[00:51:53.293][6] Try To Switch Android AOA Mode  v/p 1a40:0101 at 1-2
+[00:51:53.294][6] No Found Android Device in 1-2
+[00:51:53.294][6] Try To Switch Android AOA Mode  v/p 2109:0701 at 1-3
+[00:51:53.294][2] Could not open device 1-3: -4
+[00:51:53.294][5] Sending ACK due to expired timeout (3112622 -> 3113294)
+[00:51:53.294][5] [OUT] dev=1 sport=8 dport=5555 seq=1803 ack=169 flags=0x10 window=131072[512] len=0
+[00:51:53.294][6] send_packet(1, 0x6, 0x7f83b6f8, (nil), 0)
+[00:51:53.295][6] update_connection: sendable 49116, events 1, flags 0
+[00:51:53.295][7] main_loop iteration
+[00:51:53.295][7] USB timeout is 1000 ms
+[00:51:53.295][7] Device timeout is 100000 ms
+[00:51:53.295][7] fd count is 5
+[00:51:53.295][7] poll() returned 1
+[00:51:53.295][6] TX callback dev 1-42 len 36 -> 36 status 0
+[00:51:53.295][7] main_loop iteration
+[00:51:53.300][7] USB timeout is 995 ms
+[00:51:53.300][7] Device timeout is 100000 ms
+[00:51:53.300][7] fd count is 5
+[1] + Killed             
+#

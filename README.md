@@ -1,2 +1,1 @@
-# mtk_camera
-mtk direct connect camera
+nxp mtk gp chip ustorage immeplement
