@@ -138,14 +138,6 @@ uint8_t usProTmpBuffer[MPACKET_SIZE];
 #define IPPROTO_TCP 		6
 #endif
 
-enum mux_conn_state {
-	CONN_INIT,		//init
-	CONN_REFUSED,		// RST received during SYN
-	CONN_DYING,			// RST received
-	CONN_DEAD,			// being freed; used to prevent infinite recursion between client<->device freeing
-	CONN_CONNECTING,	// SYN
-	CONN_CONNECTED, 	// SYN/SYNACK/ACK -> active
-};
 
 enum mux_protocol {
 	MUX_PROTO_VERSION = 0,
@@ -2013,5 +2005,9 @@ uint8_t usProtocol_RecvPackage(void **buffer, uint32_t tsize, uint32_t *rsize)
 	}
 }
 
+uint8_t usProtocol_PhoneStatus(void)
+{
+	return uSinfo.State;
+}
 
 

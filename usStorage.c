@@ -2267,6 +2267,87 @@ void* vs_main_disk(void *pvParameters)
 
 	return NULL;
 }
+
+enum{
+  USTORAGE_PHOTO  = 0x01,
+};
+
+typedef struct _eventCont{
+	uint32_t capEvt;
+}eventCont;
+
+eventCont evtMain;
+void* vs_event_func(void *pvParameters)
+{
+	int fd = 0, cnt;
+	struct pollfd fds;
+	uint32_t event = 0;
+
+#define US_EVENT_DEVNAME	"/dev/vs_ustorage"
+
+	if(access(US_EVENT_DEVNAME, F_OK)){
+		SDEBUGOUT("Not Exist %s\n", US_EVENT_DEVNAME);
+		return NULL;
+	}
+	fd = open(US_EVENT_DEVNAME, O_RDONLY);
+	if(fd < 0){
+		SDEBUGOUT("Open %s failed:%s\n", US_EVENT_DEVNAME, strerror(errno));
+		return NULL;
+	}
+	memset(&evtMain, 0, sizeof(evtMain));
+	
+	fds.fd = fd;
+	fds.events = POLLIN;
+	
+	while(1){
+		cnt = poll(&fds, 1, -1);
+		if(cnt < 0){
+			if(cnt == -1 && errno == EINTR){
+				continue;
+			}else{
+				SDEBUGOUT("POLL Error:%s.\r\n", strerror(errno));
+				usleep(200000);
+				continue;
+			}
+		}
+		if(fds.revents & POLLIN){
+			/*receive event information*/
+			if(read(fd, &event, sizeof(event)) <= 0){
+				SDEBUGOUT("Read Error:%s.\n", strerror(errno));
+				continue;
+			}
+			if(event == USTORAGE_PHOTO){
+				if(usProtocol_PhoneStatus() != CONN_CONNECTED){
+					SDEBUGOUT("Phone Not OK Event IGNORE[%u]\n", evtMain.capEvt);
+					continue;
+				}
+				SDEBUGOUT("Capture Event[%u]\n", evtMain.capEvt);
+				evtMain.capEvt++;
+			}
+		}
+	}
+
+	return NULL;
+}
+
+void vs_capture_notify(uint8_t force)
+{
+	static uint32_t preCapevt = 0;
+	struct scsi_head header;
+
+	if(preCapevt != evtMain.capEvt || force){
+		header.addr = 0;
+		header.addr64 = 0;
+		header.len = 0;
+		header.ctrid = SCSI_CAMERA_CAPTURE;
+		header.head = SCSI_DEVICE_MAGIC;				
+		header.relag= 0;
+		preCapevt = evtMain.capEvt;
+		usStorage_sendHEAD(&header);
+		SDEBUGOUT("Capture Event[%u] OK\n", preCapevt);
+	}
+}
+
 int main(int argc, char **argv)
 {
 	uint8_t phoneStatus, diskStatus;
@@ -2300,6 +2381,12 @@ int main(int argc, char **argv)
 
 	if (pthread_create(&diskThread, NULL, vs_main_disk, NULL) != 0) {
 		SDEBUGOUT("ERROR: Could not start disk thread!\r\n");
+		return -1;
+	}
+	pthread_t eventThread;
+	
+	if (pthread_create(&eventThread, NULL, vs_event_func, NULL) != 0) {
+		SDEBUGOUT("ERROR: Could not start event thread!\r\n");
 		return -1;
 	}
 #endif
@@ -2340,6 +2427,8 @@ int main(int argc, char **argv)
 		}else{
 			keepAlive = 0;
 		}
+		/*catpure picture*/
+		vs_capture_notify(0);
 		diskStatus = usbLinux.usbDiskStatus;
 		if(diskStatus != notifyNONE){
 			notify_plug(diskStatus);

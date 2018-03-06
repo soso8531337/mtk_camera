@@ -1126,8 +1126,8 @@ int mtkV4l2Config(uint8_t *confPtr, uint32_t confSize, uint32_t *useSize)
 		printf("Format[%d]:%s Frame:%d\n", i, vd->fmtlist[i].format.description, 
 				vd->fmtlist[i].frameCount);
 		camDes = (cameraDescriptor*)(tConfPtr+vsConfLen);
-		//camDes->bFormatIndex = i;
-		camDes->bFormatIndex = vd->fmtlist[i].frameCount; /*just for test, sdk bug*/
+		camDes->bFormatIndex = i;
+		//camDes->bFormatIndex = vd->fmtlist[i].frameCount; /*just for test, sdk bug*/
 		camDes->bNumFrameDescriptors = vd->fmtlist[i].frameCount;
 		if(vd->fmtlist[i].format.pixelformat == V4L2_PIX_FMT_YUYV){
 			camDes->bFormatType = VS_FORMAT_UNCOMPRESSED;

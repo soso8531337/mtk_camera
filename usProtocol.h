@@ -37,6 +37,16 @@ enum{
 	PROTOCOL_REINVAILD,
 	PROTOCOL_RETRY,
 };
+
+enum mux_conn_state {
+	CONN_INIT,		//init
+	CONN_REFUSED,		// RST received during SYN
+	CONN_DYING,			// RST received
+	CONN_DEAD,			// being freed; used to prevent infinite recursion between client<->device freeing
+	CONN_CONNECTING,	// SYN
+	CONN_CONNECTED, 	// SYN/SYNACK/ACK -> active
+};
+
 uint8_t usProtocol_init(void);
 uint8_t usProtocol_DeviceDetect(void *os_priv);
 uint8_t usProtocol_ConnectPhone(void);
@@ -45,6 +55,7 @@ uint8_t usProtocol_SendPackage(void *buffer, uint32_t size);
 uint8_t usProtocol_RecvPackage(void **buffer, uint32_t tsize, uint32_t *rsize);
 uint8_t usProtocol_GetAvaiableBuffer(void **buffer, uint32_t *size);
 uint8_t usProtocol_SetconnectPhoneStatus(uint8_t status);
+uint8_t usProtocol_PhoneStatus(void);
 
 #ifdef __cplusplus
 }

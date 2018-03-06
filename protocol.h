@@ -56,7 +56,8 @@ enum {
 struct scsi_head{
 	int32_t head;	/*Receive OR Send*/
 	int32_t wtag; /*Task ID*/
-	int32_t ctrid; /*Command ID*/
+	int16_t ctrid; /*Command ID*/
+	int16_t addr64; /*support >2TB*/
 	uint32_t addr; /*Offset addr*512   represent sectors */
 	int32_t len;
 	int16_t wlun;
